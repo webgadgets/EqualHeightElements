@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+    <head>
+        <title>equal height</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <script src='dist/equal-height.js' type="text/javascript"></script>
+        <style>
+            body {
+                font-family: arial;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            .clearfix:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .col-eh {
+                background-color: #eee;
+                width: 20%;
+                border: 4px solid #fff;
+                float: left;
+                padding: 5px;
+            }
+            .parent-eh2 .col-eh {
+                background-color: mediumaquamarine;
+                color: #fff;
+            }
+            @media screen and (max-width: 1200px) {
+                .col-eh {
+                    width: 25%;
+                }
+            }
+            @media screen and (max-width: 800px) {
+                .col-eh {
+                    width: 33.333333%;
+                }
+            }
+            @media screen and (max-width: 600px) {
+                .col-eh {
+                    width: 50%;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                .col-eh {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent-eh clearfix">
+            <div class="col-eh">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <div class="col-eh">
+                 Morbi eleifend purus vel finibus vulputate.
+            </div>
+            <div class="col-eh">
+                 Morbi viverra vel ex eu dapibus. Nunc lectus dolor, aliquam vitae eros vel, sollicitudin feugiat enim.
+            </div>
+            <div class="col-eh">
+                Duis ut finibus tortor. Proin at felis ligula. Morbi imperdiet eros metus, sit amet convallis elit pellentesque sit amet.
+            </div>
+            <div class="col-eh">
+                Vivamus in ex est. Vivamus vel mauris elementum ligula bibendum congue.
+            </div>
+            <div class="col-eh">
+                Donec porta eros id tellus ornare pellentesque. Vestibulum non posuere tellus, sit amet auctor risus. Phasellus pharetra velit arcu, vel euismod est eleifend sed.
+            </div>
+            <div class="col-eh">
+                Aenean cursus sapien tincidunt eros vulputate, et convallis nisl rhoncus. Donec efficitur arcu et dapibus porttitor. Aliquam arcu urna, accumsan eu ornare vel, vestibulum quis eros. Sed a tincidunt ligula.
+            </div>
+        </div>
+        <br /><br /><br /><br /><br />
+        <div class="parent-eh2 clearfix">
+            <div class="col-eh">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+            <div class="col-eh">
+                 Morbi eleifend purus vel finibus vulputate. Lorem ipsum dolor sit.
+            </div>
+            <div class="col-eh">
+                 Morbi viverra vel ex eu  finibus vulputate finibus vulputate finibus vulputate dapibus. Nunc lectus dolor, aliquam vitae eros vel, sollicitudin feugiat enim.
+            </div>
+            <div class="col-eh">
+                Duis ut finibus tortor. Proin at felis ligula. Morbi imperdiet eros metus, sit a finibus vulputatemet convallis elit pellentesque sit amet.
+            </div>
+            <div class="col-eh">
+                Vivamus in ex est. Vivamus vel mauris elementum ligula bibendum congue.
+            </div>
+            <div class="col-eh">
+                Donec porta eros id tellus ornare pellentesque. Vestibulum non posuere tellus, sit amet auctor risus. Phasellus pharetra velit arcu, vel euismod est eleifend sed.
+            </div>
+            <div class="col-eh">
+                Aenean cursus sapien tincidunt eros vulputate, et convas vulputate, et convas vulputate, et convallis nisl rhoncus. Donec efficitur arcu et dapibus porttitor. Aliquam arcu urna, accumsan eu ornare vel, vestibulum quis eros. Sed a tincidunt ligula.
+            </div>
+        </div>
+        <script type="text/javascript">
+                $('.parent-eh').wgEqualHeight();
+                $('.parent-eh2').wgEqualHeight();
+        </script>
+    </body>
+</html>
